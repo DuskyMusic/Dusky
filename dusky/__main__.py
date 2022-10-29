@@ -27,7 +27,7 @@ from dusky.utils.dbfunctions import get_gbans_count,get_served_chats,get_served_
 import pytz
 import datetime
 from pyrogram import filters
-from rose.utils.dbfunctions import  get_served_chats, get_served_users     
+from dusky.utils.dbfunctions import  get_served_chats, get_served_users     
 import os
 from pyrogram import filters
 from dusky import app
