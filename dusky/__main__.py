@@ -78,21 +78,21 @@ async def start_bot():
 #new end   
     for module_name in ADV_MODULES:
         imported_adv = importlib.import_module("dusky.adv." + module_name)
-        # imported_adv = importlib.import_module("rose.adv." + module_name)
+        # imported_adv = importlib.import_module("dusky.adv." + module_name)
         if hasattr(imported_adv, "__advtools__") and imported_adv.__advtools__:
             ADVTOOLS[imported_adv.__MODULE__.lower()] = imported_adv
         if hasattr(imported_module, "__HELP__") and imported_module.__HELP__:
             HELPABLE[imported_module.__MODULE__.lower()] = imported_module          
     for module_name in BASE_MODULES:
-        imported_base = importlib.import_module("rose.base." + module_name)
-        # imported_base = importlib.import_module("rose.base." + module_name)
+        imported_base = importlib.import_module("dusky.base." + module_name)
+        # imported_base = importlib.import_module("dusky.base." + module_name)
         if hasattr(imported_base, "__basic_cmds__") and imported_base.__basic_cmds__:
             BASICCMDS[imported_base.__MODULE__.lower()] = imported_base
         if hasattr(imported_module, "__HELP__") and imported_module.__HELP__:
             HELPABLE[imported_module.__MODULE__.lower()] = imported_module      
     for module_name in FUN_MODULES:
-        imported_fun = importlib.import_module("rose.fun." + module_name)
-        # imported_fun = importlib.import_module("rose.fun." + module_name)
+        imported_fun = importlib.import_module("dusky.fun." + module_name)
+        # imported_fun = importlib.import_module("dusky.fun." + module_name)
         if hasattr(imported_fun, "__funtools__") and imported_fun.__funtools__:
             FUNTOOLS[imported_fun.__MODULE__.lower()] = imported_fun
         if hasattr(imported_module, "__HELP__") and imported_module.__HELP__:
