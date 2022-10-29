@@ -52,7 +52,7 @@ HELP_COMMANDS = {}  # For help menu
 async def start_bot():
     global HELPABLE
     for module_name in ALL_MODULES:
-        imported_module = importlib.import_module("rose.modules." + module_name)
+        imported_module = importlib.import_module("dusky.modules." + module_name)
         if not hasattr(imported_module, "__MODULE__"):
             imported_module.__MODULE__ = imported_module.__name__
         if not imported_module.__MODULE__.lower() in IMPORTED:
@@ -77,7 +77,7 @@ async def start_bot():
 
 #new end   
     for module_name in ADV_MODULES:
-        imported_adv = importlib.import_module("rose.adv." + module_name)
+        imported_adv = importlib.import_module("dusky.adv." + module_name)
         # imported_adv = importlib.import_module("rose.adv." + module_name)
         if hasattr(imported_adv, "__advtools__") and imported_adv.__advtools__:
             ADVTOOLS[imported_adv.__MODULE__.lower()] = imported_adv
